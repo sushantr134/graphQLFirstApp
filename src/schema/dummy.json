@@ -3,47 +3,44 @@
         "id":"1",
         "name":"Dr. Shishir Kumar",
         "department":"Computer Science",
-        "contact":123,
-        "publicationID":"pub1"
+        "contact":123
     },
     {
         "id":"13",
         "name":"Mr. Nilesh Patel",
         "department":"Computer Science",
-        "contact":1234,
-        "publicationID":"pub11"
+        "contact":1234
     },
     {
         "id":"15",
         "name":"Mr. Amit Kumar Srivastava",
         "department":"Computer Science",
-        "contact":122,
-        "publicationID":"pub3"
+        "contact":122
     },
     {
         "id":"55",
         "name":"Dr. Mahesh Kumar",
         "department":"Computer Science",
-        "contact":1213,
-        "publicationID":"pub10"
+        "contact":1213
     },
 
     {
         "id":"21",
         "name":"Dr. Amit Kumar",
         "department":"Computer Science",
-        "contact":1323,
-        "publicationID":"pub12"
+        "contact":1323
     }],
 
   "publications":[{
         "id":"pub1",
        "paperPublished":"Research on Load Balancing",
-       "publishedDate":"23/10/2015"
+       "publishedDate":"23/10/2015",
+       "facultyID":"1"
   },
   {
     "id":"pub3",
    "paperPublished":"Research on Compiler Top-Down Parsing",
-   "publishedDate":"02/01/2017"
+   "publishedDate":"02/01/2017",
+   "facultyID":"1"
 }]
 }

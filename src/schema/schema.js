@@ -4,7 +4,7 @@ const _= require('lodash')
 const {faculty,publications} = require('./dummy.json')
 //To define object types 
 
-const {GraphQLObjectType,GraphQLInt,GraphQLID,GraphQLString,GraphQLSchema} = graphql;
+const {GraphQLObjectType,GraphQLInt,GraphQLID,GraphQLString,GraphQLList,GraphQLSchema} = graphql;
 
 const FacultyType = new GraphQLObjectType({
     name:'Faculty',
@@ -14,11 +14,11 @@ const FacultyType = new GraphQLObjectType({
         department:{type: GraphQLString},
         contact:{type: GraphQLInt},
         publication:{
-            type: PublicationsType,
+            type: new GraphQLList(PublicationsType),
             resolve(parent,args){
              console.log(parent)
 
-             return _.find(publications,{id:parent.publicationID})
+             return _.filter(publications,{facultyID:parent.id})
             }
         }
     })
@@ -29,7 +29,8 @@ const PublicationsType = new GraphQLObjectType({
     fields:()=>({
         id:{type: GraphQLID},
         paperPublished:{type: GraphQLString},
-        publishedDate:{type:GraphQLString}
+        publishedDate:{type:GraphQLString},
+        facultyID:{type:GraphQLID}
     })
 })
 
@@ -51,7 +52,7 @@ const RootQuery = new GraphQLObjectType({
             args:{ id: {type:GraphQLID}},
             resolve(parent,args){
                 //code to get data from database 
-               return _.find(publications,{id:args.id});
+               return _.find(publications,{facultyID:args.id});
             }
         }                         
     }
