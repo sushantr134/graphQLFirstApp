@@ -1,32 +1,37 @@
 {
     "faculty":[{
-        "id":1,
+        "id":"1",
         "name":"Dr. Shishir Kumar",
         "department":"Computer Science",
         "contact":123
     },
     {
-        "id":13,
+        "id":"13",
         "name":"Mr. Nilesh Patel",
         "department":"Computer Science",
         "contact":1234
     },
     {
-        "id":15,
+        "id":"15",
         "name":"Mr. Amit Kumar Srivastava",
         "department":"Computer Science",
         "contact":122
     },
     {
-        "id":55,
+        "id":"55",
         "name":"Dr. Mahesh Kumar",
         "department":"Computer Science",
         "contact":1213
     },
     {
-        "id":21,
+        "id":"21",
         "name":"Dr. Amit Kumar",
         "department":"Computer Science",
         "contact":1323
-    }]
+    }],
+  "publications":[{
+      "facultyID":"1",
+       "paperPublished":"Research on Load Balancing",
+       "Published on":"23/10/2015"
+  }]
 }
